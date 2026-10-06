@@ -1,0 +1,27 @@
+3
+8
+SET a 0
+SET b 5
+JZ b 7
+ADD a b
+SUB b 1
+JMP 3
+PRINT a
+HALT
+9
+SET a 6
+SET b 7
+SET c 0
+JZ b 8
+ADD c a
+SUB b 1
+JMP 4
+PRINT c
+HALT
+6
+SET a 3
+PRINT a
+SUB a 1
+JZ a 6
+JMP 2
+HALT
