@@ -1,10 +1,11 @@
 import java.util.*;
+import java.io.*;
 
 public class Barbara
 {
-    public static void main( String args[] ) throws Exception
+     public static void main( String args[] ) throws Exception
     {
-        Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(new File("./barbara.dat"));
 
         int T = scan.nextInt();
         scan.nextLine();
@@ -15,7 +16,7 @@ public class Barbara
             String word = ""; //the final word to print out
 
             int rep = 0; //the number of times a letter repeats
-            char letter = ""; //store the letter
+            char letter = ' '; //store the letter
           
             //time to create the word
             for(char ch : arr){
@@ -24,14 +25,18 @@ public class Barbara
                 }
 
                 else{ //ch is a letter character
-                  for(int i = 0; i < rep; i++){
-                    word += "" + letter;
-                  }
+                    for(int i = 0; i < rep; i++){
+                        word += "" + letter;
+                    }
 
-                  //reset
-                  rep = 0;
-                  letter = ch;
+                    //reset
+                    rep = 0;
+                    letter = ch;
                 }
+            }
+
+            for(int i = 0; i < rep; i++){
+                    word += "" + letter;
             }
 
             System.out.println(word);
@@ -41,4 +46,7 @@ public class Barbara
     }
 
 
+
 }
+
+
