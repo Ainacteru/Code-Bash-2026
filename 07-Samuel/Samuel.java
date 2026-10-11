@@ -30,14 +30,16 @@ public class Samuel {
                 }
                 for (int occ = 0; occ <= k; occ++) {
                     int newHeight = height + occ * size;
-                    if (newHeight > n)
+                    if (newHeight <= n)
                         temp[newHeight] += arr[height];
                 }
             }
 
             arr = temp;
         }
-
+        for (int num : arr)
+            System.out.print(num + " ");
+        System.out.println();
         return arr[n];
     } 
 }
