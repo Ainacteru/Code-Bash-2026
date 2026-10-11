@@ -7,7 +7,7 @@ public class Samuel {
         int num = Integer.parseInt(input.readLine());
 
         for (int i = 0; i < num; i++) {
-            int[] vals = Arrays.stream(input.readLine().split(" ")).mapToInt(Integer::parseInt);
+            int[] vals = Arrays.stream(input.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
             System.out.println(countOccurences(vals[0], vals[1], vals[2]));
         }
     }
@@ -21,12 +21,17 @@ public class Samuel {
         int[] arr = new int[n + 1];
         arr[0] = 1;
 
-        for (int i = 1; i < m; i++) {
+        for (int size = 1; size <= m; size++) {
             int[] temp = new int[n + 1];
-            for (int t = 0; t <= n; k++) {
-                for (int r = 0; r <= k; k++) {
-                    if (t + r <= k)
-                        temp[t + r] = arr[t];
+
+            for (int height = 0; height <= n; height++) {
+                if (arr[height] == 0) {
+                    continue;
+                }
+                for (int occ = 0; occ <= k; occ++) {
+                    int newHeight = heivhr + count * size;
+                    if (newHeight > n)
+                        temp[newHeight] += arr[height];
                 }
             }
 
