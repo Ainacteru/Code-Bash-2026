@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 
 public class Samuel {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
         BufferedReader input = new BufferedReader(new FileReader("samuel.dat"));
         int num = Integer.parseInt(input.readLine());
 
@@ -29,7 +29,7 @@ public class Samuel {
                     continue;
                 }
                 for (int occ = 0; occ <= k; occ++) {
-                    int newHeight = heivhr + count * size;
+                    int newHeight = height + occ * size;
                     if (newHeight > n)
                         temp[newHeight] += arr[height];
                 }
