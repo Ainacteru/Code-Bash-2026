@@ -36,9 +36,6 @@ public class Samuel {
 
             arr = temp;
         }
-        for (int num : arr)
-            System.out.print(num + " ");
-        System.out.println();
         return arr[n];
     } 
 }
