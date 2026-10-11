@@ -29,9 +29,8 @@ public class Samuel {
                     continue;
                 }
                 for (int occ = 0; occ <= k; occ++) {
-                    int newHeight = height + occ * size;
-                    if (newHeight <= n)
-                        temp[newHeight] += arr[height];
+                    if (height + occ <= n)
+                        temp[height + occ] += arr[height];
                 }
             }
 
