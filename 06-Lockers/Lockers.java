@@ -11,14 +11,14 @@ public class Lockers
 
         Scanner scan = new Scanner(new File("./lockers.dat"));
 
-        int n = scan.nextInt();
+        Long n = scan.nextLong();
         int m = scan.nextInt();
 
         int cnt = 0;
         while(m-- > 0){
-            int q = scan.nextInt();
+            long q = scan.nextLong();
 
-            int root = (int)Math.sqrt(q);
+            long root = (long)Math.sqrt(q);
 
             if(root * root == q){
                 cnt++;
