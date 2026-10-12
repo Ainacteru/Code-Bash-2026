@@ -2,9 +2,9 @@ import java.util.*;
 import java.io.*;
 public class Coffee{
     public static void main(String[] args) throws Exception{
-        Scanner input = new Scanner(new File("coffee.dat"));
-        double cupSize = input.nextInt();
-        double kegSize = input.nextInt();
+        Scanner input = new Scanner(System.in);
+        double cupSize = input.nextLong(); // changed from .nextInt() to .nextLong()
+        double kegSize = input.nextLong(); // same here
         input.nextLine();
         int row = input.nextInt() ;
         int col = input.nextInt() ;
